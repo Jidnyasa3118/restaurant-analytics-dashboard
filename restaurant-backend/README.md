@@ -1,59 +1,42 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Project Overview
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+The Restaurant Analytics Dashboard is a full-stack web application designed to provide data-driven insights into restaurant performance. The system enables stakeholders to analyze operational metrics such as order volume, revenue trends, average order value, and peak ordering hours across multiple restaurants within a specified date range. The solution focuses on performance, clarity, and scalability, making it suitable for enterprise-level analytics requirements.
 
-## About Laravel
+Business Objective
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The primary objective of this dashboard is to enable restaurant operators and management teams to make informed decisions based on historical order data. By aggregating and visualizing key performance indicators, the platform helps identify revenue patterns, high-performing restaurants, and peak business hours, thereby supporting strategic planning and operational optimization.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+System Architecture
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The application follows a decoupled full-stack architecture consisting of a backend API layer and a frontend visualization layer. The backend is developed using Laravel and exposes RESTful APIs that handle data aggregation, filtering, and business logic. The frontend is implemented using React and consumes these APIs to present analytics through an interactive and responsive user interface.
 
-## Learning Laravel
+This architecture ensures scalability, maintainability, and efficient data processing, as heavy computations are handled server-side while the frontend remains lightweight and focused on presentation.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+Core Features
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+The dashboard allows users to search and select restaurants from a centralized list and apply advanced filters, including date range, order amount range, and hour range. Based on these filters, the system dynamically updates analytics without requiring a page reload.
 
-## Laravel Sponsors
+Key metrics such as total orders, total revenue, average order value, and peak order hour are displayed using summary cards for quick insight. Detailed trend analysis is provided through interactive charts showing daily order counts and daily revenue. Additionally, the system highlights the top three restaurants by revenue for the selected time period, enabling quick performance comparison.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Data Handling and Performance Considerations
 
-### Premium Partners
+To ensure efficient handling of large datasets, the backend performs all necessary aggregations and filtering before sending responses to the frontend. This minimizes network payload size and improves rendering performance. The system design supports future enhancements such as caching strategies, pagination, and database-level optimizations to further improve scalability.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+User Interface and Experience
 
-## Contributing
+The frontend interface is designed with a clean, professional layout aligned with enterprise dashboard standards. Clear typography, structured spacing, and visual hierarchy are used to enhance readability. Icons and charts are integrated to improve usability and information clarity. The responsive layout ensures consistent user experience across different screen sizes.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Deployment and Local Setup
 
-## Code of Conduct
+The backend can be deployed by installing dependencies using Composer and running the Laravel development server. The frontend is deployed using Node.js and npm and runs on a separate development server. Once both services are active, the frontend seamlessly communicates with the backend APIs to retrieve and display analytics data.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Detailed setup and execution steps are included in the repository to facilitate local development and testing.
 
-## Security Vulnerabilities
+Extensibility and Future Enhancements
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+The system is designed to be extensible and can be enhanced with additional features such as user authentication, role-based access control, database persistence, advanced reporting, data export capabilities, and cloud deployment. The modular code structure allows for easy integration of new analytics modules or visualization components.
 
-## License
+Documentation and Demonstration
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+A recorded video demonstration is provided to explain the system architecture, API workflow, filtering mechanisms, and analytics visualization. The complete source code, along with setup instructions and documentation, is available in the associated Git repository.       
+https://drive.google.com/file/d/1UhI3W0IzLm9HWP2qAX_gTot3AFOII2eE/view?usp=drivesdk
